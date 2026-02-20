@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SpiderArcher"
-run/main_scene="uid://ds26tobg1quir"
+run/main_scene="uid://chwspmtlavc86"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=480
 window/size/viewport_height=720
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/animation_folder_loader/plugin.cfg")
 
 [input]
 
