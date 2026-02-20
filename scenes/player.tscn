@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ds26tobg1quir"]
 
 [ext_resource type="Texture2D" uid="uid://brvh30v0cmps3" path="res://assets/idle1.png" id="1_g2els"]
+[ext_resource type="Script" uid="uid://3quymdmsjwcd" path="res://scenes/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://df4w8ec4uoel1" path="res://assets/idle2.png" id="2_qhqgy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqkch"]
@@ -17,9 +18,14 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
+radius = 6.2857056
+height = 22.857117
+
 [node name="Player" type="Area2D" unique_id=1637993050]
 position = Vector2(240, 650)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.75, 1.75)
+script = ExtResource("1_qhqgy")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=379739193]
@@ -28,3 +34,4 @@ animation = &"idle"
 frame_progress = 0.21339667
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=321636220]
+shape = SubResource("CapsuleShape2D_dqkch")
